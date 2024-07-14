@@ -62,3 +62,9 @@ anchoPage();
             caja_trasera_login.style.opacity = "1";
         }
 }
+
+document.querySelector('.btn').addEventListener('click',()=>{
+    document.querySelector('.links').style.display="block";
+    });
+
+

@@ -28,61 +28,109 @@ if (!isset($_SESSION['usuario'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.google.com/?query=roboto">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="./assets/css/style2.css">
+    <link rel="stylesheet" href="./assets/css/panel.css">
+    <link rel="shortcut icon" href="./assets/img/bd.png" type="image/x-icon">
     <title>Proyecto de Ingeniería Red de Accesos</title>
 
 
 </head>
 
-<body>
-    <div class="container">
-        <nav class="navbar">
-            <a class="navbar-logo" href="#home">
-                Menú Principal
-            </a>
+<body id="body">
+            <header>
+                <div class="icon_menu">
+                    <i class="fas fa-bars" id="btn_open"></i>
+                </div>
+            </header>
 
-            <input type="checkbox" id="expand-toggle">
-            <label for="expand-toggle" class="menu-icon">
-                <span class="mdi mdi-menu"></span>
-            </label>
+            <div class="menu_side" id="menu_side">
 
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#panel">Panel</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#carga">Carga de Datos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#ocredenciales">Credenciales</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#archivos">Archivos subidos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sistema">Administración del sistemas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="php/cerrar_sesion.php">Salir</a>
-                </li>
-            </ul>
-        </nav>
+            <div class="name_page">
+                <img src="./assets/img/bd.png" alt="bd">
+                <h4>Menú Principal</h4>
+            </div>
+        
 
-        <main class="main">
-            <main class="cars">
-                <iframe title="Proyecto de Ingeniería Red de Accesos" width="1200" height="700"
-                    src="https://app.powerbi.com/view?r=eyJrIjoiMTc0OThhNGEtMzljZC00NWY2LTk4NmUtZTM0MjI1ZDU1N2ZjIiwidCI6ImFhZTVmYWIyLTU2YmYtNDdkMS1hMzQ4LTIzNDBlMmJhYzM3NSIsImMiOjR9"
-                    frameborder="0" allowFullScreen="true"></iframe>
-            </main>
-            <footer class="footer">
-                <h2>
-                    <span class="mdi mdi-facebook"></span>
-                    <span class="mdi mdi-instagram"></span>
-                </h2>
-                <p>&copy; 2024 Proyecto Red de Accesos. Todos los derechos reservados. Andrea Luna</p>
-            </footer>
+            <div class="options_menu">
+
+                <a href="php/panel.php" class="selected">
+                    <div class="option">
+                        <i class="menu-icon fa fa-table" title="Panel"></i>
+                        <h4>Panel</h4>
+                    </div>
+                </a>
+
+                <a href="php/carga.php">
+                    <div class="option">
+                        <i class="menu-icon fa fa-database" title="Carga de datos"></i>
+                        <h4>Carga de datos</h4>
+                        </div>
+                            <li><a class="nav-link" href="#">Subir Excel con datos</a></li>
+                            <li><a class="nav-link" href="#">Lista datos subidos</a></li>
+                </a>
+
+                <a href="#">
+                    <div class="option">
+                        <i class="menu-icon fa fa-key" title="Credenciales"></i>
+                        <h4>Credenciales</h4>
+                    </div>   
+                            <li><a class="nav-link" href="#">Conexión a la Base de datos</a></li>
+                </a>
+
+                <a href="#">
+                    <div class="option">
+                        <i class="menu-icon fa fa-upload" title="Archivos subidos"></i>
+                        <h4>Archivos subidos</h4>
+                    </div>
+                            <li><a class="nav-link" href="#">Archivos subidos previamente</a></li>
+                </a>
+
+                <a href="#">
+                    <div class="option">
+                        <i class="menu-icon fa fa-cog" title="Administración del sistema"></i>
+                        <h4>Administración del sistema</h4>
+                    </div>
+                            <li><a class="nav-link" href="#">Usuarios</a></li>
+                            <li><a class="nav-link" href="#">Panel Power BI</a></li>
+                </a>
+
+                <a href="php/cerrar_sesion.php">
+                    <div class="option">
+                        <i class="menu-icon fa fa-sign-out" title="Salir"></i>
+                        <h4>Salir</h4>
+                    </div>
+                </a>
+            </div>
     </div>
 
+        <main class="main_panel">
+            </label>
+                <iframe title="Proyecto de Ingeniería Red de Accesos" width="1400" height="630"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiMTc0OThhNGEtMzljZC00NWY2LTk4NmUtZTM0MjI1ZDU1N2ZjIiwidCI6ImFhZTVmYWIyLTU2YmYtNDdkMS1hMzQ4LTIzNDBlMmJhYzM3NSIsImMiOjR9"
+                    frameborder="0" allowFullScreen="true"></iframe>
+            
+                    <footer class="footer">
+        <div class="copy">
+          <p>
+            Sitio desarrollado por
+            <a
+              target="_blank" href="http://127.0.0.1:5501/">Andrea Luna Vargas 2024</a>
+          </p>
+        </div>
+        <div class="redes">
+          <ul>
+            <li>
+              <a target="_blank"href="https://www.linkedin.com/in/andrea-luna-58173852/"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a target="_blank" href="https://github.com/anluni/"><i class="fa-brands fa-github"></i></a>
+            </li>
+            </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/09bfd5ff30.js" crossorigin="anonymous"></script>
+
+    <script src="menu_proyecto.js"></script>
 </body>
 
 </html>
