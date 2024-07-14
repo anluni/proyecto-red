@@ -28,7 +28,7 @@ if (!isset($_SESSION['usuario'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.google.com/?query=roboto">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="./assets/css/panel.css">
+    <link rel="stylesheet" href="./assets/css/datos.css">
     <link rel="shortcut icon" href="./assets/img/bd.png" type="image/x-icon">
     <title>Proyecto de Ingeniería Red de Accesos</title>
 
@@ -64,7 +64,7 @@ if (!isset($_SESSION['usuario'])) {
                         <i class="menu-icon fa fa-database" title="Carga de datos"></i>
                         <h4>Carga de datos</h4>
                         </div>
-                            <li><a class="nav-link" href="#">Subir Excel con datos</a></li>
+                            <li><a class="nav-link" href="#">Subir Excel</a></li>
                             <li><a class="nav-link" href="#">Lista datos subidos</a></li>
                 </a>
 
@@ -100,15 +100,19 @@ if (!isset($_SESSION['usuario'])) {
                     </div>
                 </a>
             </div>
-    </div>
+        </div>
 
         <main class="main_panel">
             </label>
-                <iframe title="Proyecto de Ingeniería Red de Accesos" width="1400" height="630"
+                <iframe title="Proyecto de Ingeniería Red de Accesos" width="1240" height="630"
                     src="https://app.powerbi.com/view?r=eyJrIjoiMTc0OThhNGEtMzljZC00NWY2LTk4NmUtZTM0MjI1ZDU1N2ZjIiwidCI6ImFhZTVmYWIyLTU2YmYtNDdkMS1hMzQ4LTIzNDBlMmJhYzM3NSIsImMiOjR9"
                     frameborder="0" allowFullScreen="true"></iframe>
             
+        </main>
+
+        <div class="panel_footer">         
                     <footer class="footer">
+                        
         <div class="copy">
           <p>
             Sitio desarrollado por
@@ -130,7 +134,7 @@ if (!isset($_SESSION['usuario'])) {
     </div>
     <script src="https://kit.fontawesome.com/09bfd5ff30.js" crossorigin="anonymous"></script>
 
-    <script src="menu_proyecto.js"></script>
+    <script src="./assets/js/menu.js"></script>
 </body>
 
 </html>

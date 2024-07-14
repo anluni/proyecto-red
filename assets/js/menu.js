@@ -9,7 +9,7 @@ var body = document.getElementById("body");
 //Evento para mostrar y ocultar menú
     function open_close_menu(){
         body.classList.toggle("body_move");
-        side_menu.classList.toggle("menu__side_move");
+        side_menu.classList.toggle("menu_side_move");
     }
 
 //Si el ancho de la página es menor a 760px, ocultará el menú al recargar la página
@@ -17,7 +17,7 @@ var body = document.getElementById("body");
 if (window.innerWidth < 760){
 
     body.classList.add("body_move");
-    side_menu.classList.add("menu__side_move");
+    side_menu.classList.add("menu_side_move");
 }
 
 //Haciendo el menú responsive(adaptable)
@@ -27,13 +27,13 @@ window.addEventListener("resize", function(){
     if (window.innerWidth > 760){
 
         body.classList.remove("body_move");
-        side_menu.classList.remove("menu__side_move");
+        side_menu.classList.remove("menu_side_move");
     }
 
     if (window.innerWidth < 760){
 
         body.classList.add("body_move");
-        side_menu.classList.add("menu__side_move");
+        side_menu.classList.add("menu_side_move");
     }
 
 });

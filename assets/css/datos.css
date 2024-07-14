@@ -19,16 +19,22 @@ header {
 }
 
 /*----------- BODY --------------*/
-#body {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+body{
     margin-left: 80px;
     margin-top: 80px;
     transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
-header {
+main{
+    padding: 20px;
+}
+
+header{
     width: 100%;
     height: 80px;
-    background-color: #f5f5f5;
+    background: #f5f5f5;
     display: flex;
     align-items: center;
     position: fixed;
@@ -51,7 +57,7 @@ header {
     position: absolute;
 }
 
-.menu_side {
+.menu_side{
     width: 80px;
     height: 100%;
     background: #3375cc;
@@ -59,27 +65,36 @@ header {
     top: 0;
     left: 0;
     color: white;
-    font-size: 15px;
+    font-size: 18px;
     z-index: 300;
     overflow: hidden;
     overflow-y: scroll;
+    border-right: 20px solid #3375cc;
     transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
-.menu_side::-webkit-scrollbar {
+/*Ocultar scroll para chrome, safari y opera*/
+.menu_side::-webkit-scrollbar{
     display: none;
 }
 
-.menu_side {
+/*Ocultar scroll para IE, Edge y Firefox*/
+.menu_side{
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
-.name_page {
-    padding: 20px 30px;
+
+.name_page{
+    padding: 20px 20px;
     display: flex;
     align-items: center;
     margin-top: 10px;
+}
+
+.name_page i{
+    width: 20px;
+    margin-right: 20px;
 }
 
 .name_page img {
@@ -87,49 +102,41 @@ header {
     margin-right: 20px;
 }
 
-.name_page i {
-    width: 40px;
-    margin-right: 20px;
-}
 
-.options_menu {
+.options_menu{
     padding: 20px 30px;
     position: absolute;
     top: 80px;
 }
 
-.options_menu a {
+.options_menu a{
     color: #ffffffb2;
     cursor: default;
     display: block;
     position: relative;
     transition: color 300ms;
-    cursor: pointer;
 }
 
-.options_menu a:hover {
+.options_menu a:hover{
     color: white;
 }
 
-.options_menu .option {
+.options_menu .option{
     padding: 20px 0px;
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.options_menu .option i {
+.options_menu .option i{
     width: 20px;
-    margin: 20px;
+    margin-right: 20px;
     cursor: pointer;
-    color: white;
 }
 
 .options_menu .option h4{
     font-weight: 300;
     cursor: pointer;
-    color: #ffffffb2;
-    transition: color 300ms;
 }
 
 .options_menu .option h4:hover {
@@ -138,7 +145,7 @@ header {
 
 .nav-link {
     cursor: pointer;
-    font-size: 12px;
+    font-size: 13px;
     color: #ffffffb2;
     transition: color 300ms;
     margin-left: 50px;
@@ -148,28 +155,42 @@ header {
     color: white;
 }
 
-a.selected {
-    color: #ffff;
+
+a.selected{
+    color: #fff;
 }
 
-.selected:before {
+.selected:before{
     content: '';
     width: 3px;
     height: 80%;
-    background-color: white;
+    background: white;
     position: absolute;
     top: 10%;
     left: -30px;
 }
 
-.body_move {
+/*Clases para usar en JavaScript*/
+
+.body_move{
     margin-left: 250px;
 }
 
-.menu_side_move {
+.menu_side_move{
     width: 250px;
 }
 
+
+@media screen and (max-width: 760px){
+    .body_move{
+        margin-left: 0px;
+    }
+
+    .menu__side_move{
+        width: 80px;
+        left: -80px;
+    }
+}
 /*----------- MAIN ---------------*/
 
 .main {
@@ -185,7 +206,7 @@ a.selected {
 }
 
 .main_panel {
-    padding-left: 30px;
+    margin-right: 180px;
 }
 
 /*----------- DASHBOARD ----------*/
@@ -466,6 +487,11 @@ a.selected {
     height: 60px;
 }
 
+.panel_footer {
+    margin-top: -287px;
+    margin-left: -30px;
+}
+
 .footer a {
     color: #fff;
     text-decoration: underline;
@@ -500,15 +526,4 @@ a.selected {
 /*----------- MEDIA QUERY TABLE ------------*/
 
 
-@media screen and (max-width: 760px) {
 
-    .body_move {
-        margin-left: 0px;
-    }
-
-    .menu_side_move {
-        width: 80px;
-        left: -80px;
-    }
-
-}
