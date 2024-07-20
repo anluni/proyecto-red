@@ -1,0 +1,540 @@
+@import url(https://fonts.google.com/?query=roboto);
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+header {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+/*----------- BODY --------------*/
+
+body{
+    margin-left: 80px;
+    margin-top: 79px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+
+.icon_menu{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10px);
+}
+
+.icon_menu i{
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.menu_side{
+    width: 80px;
+    height: 100%;
+    background: #3375cc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-right: 20px solid #3375cc;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/*Ocultar scroll para chrome, safari y opera*/
+.menu_side::-webkit-scrollbar{
+    display: none;
+}
+
+/*Ocultar scroll para IE, Edge y Firefox*/
+.menu_side{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+.name_page{
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.name_page i{
+    width: 20px;
+    margin-right: 20px;
+}
+
+.name_page img {
+    width: 40px;
+    margin-right: 20px;
+}
+
+.options_menu{
+    padding: 20px 30px;
+    position: absolute;
+    top: 80px;
+}
+
+.options_menu a{
+    color: #ffffffb2;
+    cursor: default;
+    display: block;
+    position: relative;
+    transition: color 300ms;
+}
+
+.options_menu a:hover{
+    color: white;
+}
+
+.options_menu .option{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.options_menu .option i{
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.options_menu .option h4{
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.options_menu .option h4:hover {
+    color: white;
+}
+
+/*USUARIO*/
+
+.header_superior{
+    font-size: 14px;
+    max-width: 1000px;
+    margin: auto;
+    margin-left: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav{
+    height: 100%;
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+
+nav > ul > li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav > ul > li:first-child > a{
+    background-image: url(../img/usuario.jpg);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 40px 60px;
+}
+
+nav > ul > li:first-child:hover > a{
+    background-image: url(../img/usuario.jpg);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+nav ul li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    font-size: 11px;
+    transition: all 300ms ease;
+}
+
+nav ul li a:hover{
+    transform: scale(1.1);
+    background-color: #0074C7;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*SUBMENU USUARIO*/
+
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    z-index: 10;
+    transition: all 300ms ease;
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+nav ul li ul:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav ul li ul li a{
+    display: block;
+    color: #0099E9;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover{
+    background: #0074C7;
+    color: #fff;
+    transform: scale(1.2);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+/*OPCIONES MENU LATERAL*/
+
+.nav-link {
+    cursor: pointer;
+    font-size: 13px;
+    color: #ffffffb2;
+    transition: color 300ms;
+    margin-left: 50px;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+a.selected{
+    color: #fff;
+}
+
+.selected:before{
+    content: '';
+    width: 3px;
+    height: 80%;
+    background: white;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+}
+
+.profile-image img{
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+/*Clases para usar en JavaScript*/
+
+.body_move{
+    margin-left: 250px;
+}
+
+.menu_side_move{
+    width: 250px;
+}
+
+/*----------CONTAINER-------------*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -200px;
+}
+
+.opciones{
+    margin-top: 50px;
+}
+
+.card-header {
+    text-align: center;
+}
+
+.row {
+    background-clip: border-box;
+    background-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(221, 228, 235);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(221, 228, 235);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgb(221, 228, 235);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgb(221, 228, 235);
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-shadow: rgba(90, 113, 208, 0.11) 0px 0px 0px 0px, rgba(167, 175, 183, 0.33) 0px 4px 16px 0px;
+    box-sizing: border-box;
+    color: rgb(33, 37, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "roboto", sans-serif;
+    font-size: 16px;
+    height: 80px;
+    line-height: 24px;
+    margin-left: 250PX;
+    margin-top: -35px;
+    overflow-wrap: break-word;
+    position: relative;
+    padding-bottom: 380PX;
+    padding-left: 50px;
+    padding-right: 20px;
+    text-align: left;
+    text-shadow: none;  
+    text-size-adjust: 100%;
+    transform: translateY(100px);
+    unicode-bidi: isolate;
+    width: 500px;
+    margin-top: 250px;
+    margin-right: 200px;
+    margin-left: 200px;
+
+}
+
+.contraseña {
+    text-align: center;
+    box-sizing: border-box;
+    color: #3375cc;
+    display: block;
+    font-family: "roboto", sans-serif;
+    font-size: 25px;
+    font-stretch: 100%;
+    font-style: normal;
+    font-weight: bold;
+    height: 1px;
+    line-height: normal;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    margin-bottom: 80px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    margin-top: 150px;
+    overflow-wrap: break-word;
+    text-align: left;
+    text-shadow: none;
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+}
+
+.formgroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+    margin-top: -50px;
+    padding: 20px 30px;
+    margin-right: 50px;
+    margin-top: -15px;
+}
+
+.campo {
+    padding: 12px 30px;
+    width: 300px;
+    height: 1px;
+    margin-left: 10px;
+}
+
+.usuario {
+    margin-left: 14px;
+}
+
+#btnAceptar {
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: rgb(25, 216, 149);
+    border-bottom-color: rgb(25, 216, 149);
+    border-bottom-left-radius: solid 1px;
+    border-bottom-right-radius: solid 1px;
+    border-bottom-style: solid 1px;
+    border-bottom-width: 2px;
+    border-image-outset: 0;
+    color: #fff;
+    margin-left: 100px;
+    appearance: button;
+    cursor: pointer;
+    height: 40px;
+    width: 130px;
+}
+
+#btnAceptar:hover {
+    background-color: rgb(25, 216, 149) !important;
+    color: #000 !important;
+}
+
+#btnCancelar {
+    text-align: center;
+    padding: 0.7rem 2rem;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 175, 0);
+    border-bottom-color: rgb(255, 175, 0);
+    border-bottom-left-radius: solid 3px;
+    border-bottom-right-radius: solid 3px;
+    border-bottom-style: solid 3px;
+    border-bottom-width: 2px;
+    border-image-outset: 0;
+    color: #fff;
+    align-items: flex-start;
+    appearance: button;
+    align-items: flex-start;
+    appearance: button;
+    cursor: pointer;
+    height: 40px;
+    width: 130px;
+}
+
+#btnCancelar:hover {
+    background-color: rgb(255, 175, 0) !important;
+    color: #000 !important;
+}
+
+.card-footer{
+    margin-top: 50px;
+}
+
+/*----------- FOOTER -------------*/
+
+.footer {
+    grid-area: footer;
+    background-color: #3375cc;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 220px;
+    font-weight: 304;
+    font-style: "roboto", sans-serif;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    height: 60px;
+}
+
+.panel_footer {
+    margin-top: -287px;
+    margin-left: -30px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer p {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.redes ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .redes ul li {
+    margin-left: 1rem;
+    font-size: 10px;
+  }
+  
+  .redes ul li a i {
+    font-size: 200%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+  
+.copy p a:hover {
+  color: black;
+}
+
+/*----------- MEDIA QUERY TABLE ------------*/
+
+@media screen and (max-width: 760px){
+    .body_move{
+        margin-left: 0px;
+    }
+
+    .menu__side_move{
+        width: 80px;
+        left: -80px;
+    }
+}
+
+

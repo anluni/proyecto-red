@@ -5,6 +5,7 @@ document.getElementById("btn_open").addEventListener("click", open_close_menu);
 var side_menu = document.getElementById("menu_side");
 var btn_open = document.getElementById("btn_open");
 var body = document.getElementById("body");
+var profile = document.getElementById("profile-image");
 
 //Evento para mostrar y ocultar menú
     function open_close_menu(){
